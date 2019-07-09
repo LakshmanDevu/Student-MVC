@@ -1,0 +1,23 @@
+﻿@model PCTest.Models.Login.LoginModel;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Log In</h2>
+<table>
+    <thead>Enter Details</thead>
+    <tr>
+        <td>Enter User Name :: </td>
+        <td>@Html.TextAreaFor(m => m.UserName)</td>
+    </tr>
+    <tr>
+        <td>Password :: </td>
+        <td>@Html.TextAreaFor(m => m.Password)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="location.href='@Url.Action("Login", "Login")'" value="Submit" />
+        </td>
+    </tr>
+</table>
